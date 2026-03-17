@@ -252,7 +252,7 @@ const TradingViewWidget: React.FC = () => {
         setCandleData(initialCandles);
         
         if (candleSeriesRef.current) {
-          candleSeriesRef.current.setData(initialCandles);
+          candleSeriesRef.current.setData(initialCandles as any);
         }
         
         if (initialCandles.length > 0) {
@@ -351,8 +351,8 @@ const TradingViewWidget: React.FC = () => {
         bbLowerRef.current = chart.addLineSeries({ color: '#a78bfa', lineWidth: 1, title: 'BB Lower' });
       }
       bbBasisRef.current.setData(bbData.basis);
-      bbUpperRef.current.setData(bbData.upper);
-      bbLowerRef.current.setData(bbData.lower);
+      bbUpperRef.current?.setData(bbData.upper);
+      bbLowerRef.current?.setData(bbData.lower);
     } else if (bbBasisRef.current) {
       chart.removeSeries(bbBasisRef.current);
       if(bbUpperRef.current) chart.removeSeries(bbUpperRef.current);
@@ -375,8 +375,8 @@ const TradingViewWidget: React.FC = () => {
       }
       
       macdLineRef.current.setData(macdData.macd);
-      macdSignalRef.current.setData(macdData.signal);
-      macdHistRef.current.setData(macdData.histogram);
+      macdSignalRef.current?.setData(macdData.signal);
+      macdHistRef.current?.setData(macdData.histogram);
     } else if (macdLineRef.current) {
        // Only reset margin if RSI is also off (simplified logic, ideally manage panes dynamically)
        if (!indicators.rsi) {
