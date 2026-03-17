@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/crypto-js": "^4.2.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "crypto-js": "4.1.1",
