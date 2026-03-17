@@ -129,7 +129,7 @@ const RiskCalculator: React.FC = () => {
           {isHighRisk ? (
             <div className="flex items-start gap-3 text-danger bg-danger/10 p-3 rounded-lg text-xs leading-relaxed border border-danger/20">
               <AlertTriangle className="w-5 h-5 shrink-0" />
-              <p><strong>High Risk:</strong> Requires >50% of account balance. Reduce position size or increase leverage (carefully).</p>
+              <p><strong>High Risk:</strong> Requires {'>'} 50% of account balance. Reduce position size or increase leverage (carefully).</p>
             </div>
           ) : (
              <div className="flex items-start gap-3 text-success bg-success/10 p-3 rounded-lg text-xs leading-relaxed border border-success/20">
