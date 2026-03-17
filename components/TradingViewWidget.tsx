@@ -351,8 +351,8 @@ const TradingViewWidget: React.FC = () => {
         bbLowerRef.current = chart.addLineSeries({ color: '#a78bfa', lineWidth: 1, title: 'BB Lower' });
       }
       bbBasisRef.current.setData(bbData.basis);
-      bbUpperRef.current.setData(bbData.upper);
-      bbLowerRef.current.setData(bbData.lower);
+      bbUpperRef.current?.setData(bbData.upper);
+      bbLowerRef.current?.setData(bbData.lower);
     } else if (bbBasisRef.current) {
       chart.removeSeries(bbBasisRef.current);
       if(bbUpperRef.current) chart.removeSeries(bbUpperRef.current);
