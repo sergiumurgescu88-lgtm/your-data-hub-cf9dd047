@@ -252,7 +252,7 @@ const TradingViewWidget: React.FC = () => {
         setCandleData(initialCandles);
         
         if (candleSeriesRef.current) {
-          candleSeriesRef.current.setData(initialCandles);
+          candleSeriesRef.current.setData(initialCandles as any);
         }
         
         if (initialCandles.length > 0) {
