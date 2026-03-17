@@ -375,8 +375,8 @@ const TradingViewWidget: React.FC = () => {
       }
       
       macdLineRef.current.setData(macdData.macd);
-      macdSignalRef.current.setData(macdData.signal);
-      macdHistRef.current.setData(macdData.histogram);
+      macdSignalRef.current?.setData(macdData.signal);
+      macdHistRef.current?.setData(macdData.histogram);
     } else if (macdLineRef.current) {
        // Only reset margin if RSI is also off (simplified logic, ideally manage panes dynamically)
        if (!indicators.rsi) {

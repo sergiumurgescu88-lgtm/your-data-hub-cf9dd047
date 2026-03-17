@@ -72,7 +72,7 @@ const BacktestSim: React.FC<BacktestSimProps> = ({ strategy }) => {
               contentStyle={{ backgroundColor: '#1e293b', borderColor: '#334155', color: '#f8fafc' }}
               itemStyle={{ color: '#f8fafc' }}
               labelStyle={{ display: 'none' }}
-              formatter={(value: number) => [`$${value}`, 'Price']}
+              formatter={(value: any) => [`$${value}`, 'Price']}
             />
             <Area type="monotone" dataKey="price" stroke="#3b82f6" strokeWidth={2} fillOpacity={1} fill="url(#colorPrice)" />
             
